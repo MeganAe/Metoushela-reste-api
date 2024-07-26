@@ -1,15 +1,14 @@
 
-// Importer les modules nécessaires
+
 const express = require('express');
 const axios = require('axios');
 
-// Créer une instance de l'application Express
 const app = express();
 
-// Définir le port sur lequel le serveur va écouter
+
 const PORT = process.env.PORT || 3000;
 
-// Configurer la route pour l'endpoint spécifié
+// routes
 app.get('/api/gpt4o', async (req, res) => {
   try {
     const context = req.query.context;
