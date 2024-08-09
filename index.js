@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 app.get('/api/gpt4o', async (req, res) => {
   try {
     const context = req.query.context;
-    const response = await axios.get(`https://metoushela-rest-api-tp5g.onrender.com/api/blackbox?text=${context}`);
+    const response = await axios.get(`https://api.kenliejugarap.com/freegpt4o8k/?question=${context}`);
     res.json(response.data);
   } catch (error) {
     res.status(500).json({ error: 'Une erreur est survenue' });
